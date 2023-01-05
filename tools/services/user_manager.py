@@ -24,7 +24,7 @@ def start(args, session, unlocked_cb=None):
         desktop_file_path = args.apps_dir + "/waydroid." + packageName + ".desktop"
         if not os.path.exists(desktop_file_path):
             lines = ["[Desktop Entry]", "Type=Application"]
-            lines.append("Name=" + appInfo["name"])
+            lines.append("Name=" + appInfo["name"] + " (Waydroid)")
             lines.append("Exec=waydroid app launch " + packageName)
             lines.append("Icon=" + args.waydroid_data + "/icons/" + packageName + ".png")
             lines.append("X-Purism-FormFactor=Workstation;Mobile;")
